@@ -1,5 +1,5 @@
 # dna-data-generator
-This project aims to reproduce the method described in [1] *DNA synthetic
+This project aims to reproduce the method described in [[1]](#1) *DNA synthetic
 sequences generation using multiple competing Markov models.* by Pratas et al. and evaluate it.
 
 
@@ -17,7 +17,7 @@ details, like cut-off frequencies and scaling, the full replication of filter de
 2) **Kullback-Leibler Divergence** - measuring the difference between the probability distribution of the original sequences and
 that of the corresponding synthetic sequence.
 3) **Machine Learning predictive task** -  additionally, simple classification task trained on original and synthetic data from Kaggle called ”DNA Sequence Dataset” by Nagesh Singh
-Chauhan [2] which contains 4,380 human DNA sequences of unknown origin classed as one of seven
+Chauhan [[2]](#2) which contains 4,380 human DNA sequences of unknown origin classed as one of seven
 possible classes representing gene families (0: G protein coupled receptors, 1: tyrosine kinase, 2:
 tyrosine phosphatase, 3: synthetase, 4: synthase, 5: ion channel, 6: transcription factor).
 
@@ -61,7 +61,8 @@ of sequences against the full sequence of chromosome 21:
 This implementation was done by Alicja Karlowicz and [Benjamin Lee](https://github.com/BananaLee) for Security, Privacy and Explainability in Machine Learning project
 
 # References
-[1] Pratas, Diogo & Bastos, Carlos & Pinho, Armando & Neves, Ant´onio & Matos, Lu´ıs. (2011). DNA synthetic
+<a id="1">[1]</a>  Pratas, Diogo & Bastos, Carlos & Pinho, Armando & Neves, Ant´onio & Matos, Lu´ıs. (2011). DNA synthetic
 sequences generation using multiple competing Markov models. IEEE Workshop on Statistical Signal Processing
 Proceedings. 133-136. 10.1109/SSP.2011.5967639.
-[2] Nagesh Singh Chauhan. DNA sequence dataset https://www.kaggle.com/datasets/nageshsingh/dna-sequence-dataset
+
+<a id="2">[2]</a>  Nagesh Singh Chauhan. DNA sequence dataset https://www.kaggle.com/datasets/nageshsingh/dna-sequence-dataset
