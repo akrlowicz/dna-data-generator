@@ -57,6 +57,26 @@ of sequences against the full sequence of chromosome 21:
 - half seq: A sequence generated from three competing models of orders 2, 6, and 10
 - full seq: A sequence generated from all competing models of orders 2, 4, 6, 8, 10, 12
 
+# The findings
+1. From Information Content plots: 
+  - more noticeable low entropy valleys as number of competing finite context models increases
+  - more low entropy valleys in the information sequences with the increase in side information context context depth
+  - so processing sequences in bigger word size values provides more information for generator and reduces randomness of synthetic sequence, which is in agreement with the paper
+  - processing synthetic sequence one nucleotide at time yields in far smaller entropy (sequence E to F/G scale)
+
+2. From KL Divergence:
+  - single model performed the best with the lowest divergence against the original sequence. This is in disagreement with the original paper and could be a statistical fluke and further statistical testing is required to ensure this is not the case
+  - increasing divergence increases with word size as expected (however values we obtained are smaller than the ones in paper, which points to conclusion that based on this measure, our synthetic sequences are more similar to original ones)
+  
+3. From ML classification:
+  - classification on synthetic data yields extremly poor results in comparison to original
+  - however those are really short sequences that we operated on, so models have trouble learning statistics of it and therefore, producing synthetic data
+that would resemble original
+  - due to the lack of domain knowledge we don’t know which parts of sequences are specific to genome family - synthetic data generation in this case
+most certainly looses this information in the process
+  -  as synthetic data generation preserves statistical information, it can’t guarantee specific part of sequence to be generated that may be crucial in classification. Therefore other feature extraction methods based on statistical data may be more appropriate for this predictive task (here counts of parts of sequences as words was used)
+
+
 # Authors
 This implementation was done by Alicja Karlowicz and [Benjamin Lee](https://github.com/BananaLee) for Security, Privacy and Explainability in Machine Learning project
 
